@@ -2,10 +2,14 @@ import { createMemoryHistory, createRouter } from "vue-router";
 
 import HomeView from "./components/HomeView.vue";
 import HelloWorld from "./components/HelloWorld.vue";
+import AttributeBinding from "./components/AttributeBinding.vue";
+import ConditionalLoops from "./components/ConditionalsLoops.vue";
 
 const routes = [
     {path: "/", component: HomeView},
-    {path: "/helloworld", component: HelloWorld}
+    {path: "/helloworld", component: HelloWorld},
+    {path: "/attributebinding", component: AttributeBinding},
+    {path: "/conditionalsLoops", component: ConditionalLoops}
 ]
 
 const router = createRouter({

@@ -7,6 +7,8 @@ import { RouterLink, RouterView } from 'vue-router';
   <div class="flex flex-row flex-wrap justify-center leading-8 gap-4">
     <RouterLink to="/" class="hover:underline">Home</RouterLink>
     <RouterLink to="/helloworld" class="hover:underline">Hello World</RouterLink>
+    <RouterLink to="/attributebinding">Attribute Binding</RouterLink>
+    <RouterLink to="/conditionalsLoops">Conditionals and Loops</RouterLink>
   </div>
   <div>
     <RouterView />
