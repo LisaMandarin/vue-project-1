@@ -11,6 +11,7 @@ import { RouterLink, RouterView } from 'vue-router';
     <RouterLink to="/conditionalsLoops">Conditionals and Loops</RouterLink>
     <RouterLink to="formbinding">Form Binding</RouterLink>
     <RouterLink to="simplecomponent">Simple Component</RouterLink>
+    <RouterLink to="markdowneditor">Markdown Editor</RouterLink>
   </div>
   <div>
     <RouterView />

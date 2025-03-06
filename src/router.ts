@@ -6,6 +6,7 @@ import AttributeBinding from "./components/AttributeBinding.vue";
 import ConditionalLoops from "./components/ConditionalsLoops.vue";
 import FormBinding from "./components/FormBinding.vue";
 import SimpleComponent from "./components/SimpleComponent.vue";
+import MarkdownEditor from "./components/MarkdownEditor.vue";
 
 const routes = [
     {path: "/", component: HomeView},
@@ -13,7 +14,8 @@ const routes = [
     {path: "/attributebinding", component: AttributeBinding},
     {path: "/conditionalsLoops", component: ConditionalLoops},
     {path: "/formbinding", component: FormBinding},
-    {path: "/simplecomponent", component: SimpleComponent}
+    {path: "/simplecomponent", component: SimpleComponent},
+    {path: "/markdowneditor", component: MarkdownEditor}
 ]
 
 const router = createRouter({
