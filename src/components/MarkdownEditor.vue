@@ -20,7 +20,7 @@
 </script>
 
 <template>
-    <h1>Markdown Editor</h1>
+    <h1 class="font-bold text-2xl text-center">Markdown Editor</h1>
     <div class="grid grid-cols-2 gap-4 p-4">
         <textarea class="p-4 border border-gray-100" :value="input" @input="update">
             

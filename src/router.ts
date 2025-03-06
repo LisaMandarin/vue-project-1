@@ -7,6 +7,7 @@ import ConditionalLoops from "./components/ConditionalsLoops.vue";
 import FormBinding from "./components/FormBinding.vue";
 import SimpleComponent from "./components/SimpleComponent.vue";
 import MarkdownEditor from "./components/MarkdownEditor.vue";
+import FetchData from "./components/FetchData.vue";
 
 const routes = [
     {path: "/", component: HomeView},
@@ -15,7 +16,8 @@ const routes = [
     {path: "/conditionalsLoops", component: ConditionalLoops},
     {path: "/formbinding", component: FormBinding},
     {path: "/simplecomponent", component: SimpleComponent},
-    {path: "/markdowneditor", component: MarkdownEditor}
+    {path: "/markdowneditor", component: MarkdownEditor},
+    {path: "/fetchdata", component: FetchData}
 ]
 
 const router = createRouter({

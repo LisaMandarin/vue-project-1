@@ -9,9 +9,10 @@ import { RouterLink, RouterView } from 'vue-router';
     <RouterLink to="/helloworld" class="hover:underline">Hello World</RouterLink>
     <RouterLink to="/attributebinding">Attribute Binding</RouterLink>
     <RouterLink to="/conditionalsLoops">Conditionals and Loops</RouterLink>
-    <RouterLink to="formbinding">Form Binding</RouterLink>
-    <RouterLink to="simplecomponent">Simple Component</RouterLink>
-    <RouterLink to="markdowneditor">Markdown Editor</RouterLink>
+    <RouterLink to="/formbinding">Form Binding</RouterLink>
+    <RouterLink to="/simplecomponent">Simple Component</RouterLink>
+    <RouterLink to="/markdowneditor">Markdown Editor</RouterLink>
+    <RouterLink to="/fetchdata">Fetch Data</RouterLink>
   </div>
   <div>
     <RouterView />

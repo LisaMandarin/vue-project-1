@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
-@layer component {
+@layer components {
     .custom-btn {
         @apply px-4 py-2 shadow bg-gray-100 rounded-xl cursor-pointer
+    }
+    .link {
+        @apply text-blue-500 hover:underline
     }
 }
