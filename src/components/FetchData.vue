@@ -1,33 +1,25 @@
-<script>
+<script setup>
+    import { onMounted, ref, watch } from 'vue'
     const api_url = 'https://api.github.com/repos/vuejs/core/commits?per_page=3&sha='
-    export default {
-        data: () => ({
-            branches: ['main', 'minor'],
-            currentBranch: 'main',
-            commits: []
-        }),
-        methods: {
-            async fetchData() {
-                const url = `${api_url}${this.currentBranch}`
-                const res = await fetch(url)
-                const data = await res.json()
-                this.commits = data
-            },
-            truncate(v) {
-                const newline = v.indexOf('\n')
-                return v.slice(0, newline)
-            },
-            formatDate(v) {
-                return v.replace(/T|Z/g, ' ')
-            }
-        },
-        created() {
-            this.fetchData()
-        },
-        watch: {
-            currentBranch: 'fetchData',
-        }
+    const branches = ref(['main', 'minor'])
+    const currentBranch = ref('main')
+    const commits = ref([])
+
+    async function fetchData() {
+        const url =  `${api_url}${currentBranch.value}`
+        const res = await fetch(url)
+        commits.value = await res.json()
     }
+    function truncate(v) {
+        const newline = v.indexOf('\n')
+        return v.slice(0, newline)
+    }
+    function formatDate(v) {
+        return v.replace(/T|Z/g, ' ')
+    }
+    onMounted(fetchData)
+    watch(currentBranch, fetchData)
+    
 </script>
 
 <template>

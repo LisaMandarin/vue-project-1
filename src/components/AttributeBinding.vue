@@ -1,21 +1,15 @@
-<script>
-    export default {
-        data() {
-            return {
-                message: "Hello....",
-                isRed: false,
-                isBlue: false
-            }
-        },
-        methods: {
-            toggleRed() {
-                this.isRed = !this.isRed
-            },
-            toggleBlue() {
-                this.isBlue = !this.isBlue
-            }
-        }
+<script setup>
+    import { ref } from 'vue';
+    const message = ref("This is a title")
+    const isRed = ref(false)
+    const isBlue = ref(true)
+    function toggleRed() {
+        isRed.value = !isRed.value
     }
+    function toggleBlue() {
+        isBlue.value = !isBlue.value
+    }
+    
 </script>
 
 <template>

@@ -1,83 +1,66 @@
-<script>
-    export default {
-        data() {
-            return {
-                newInput: "",
-                newCheckbox: true,
-                checkboxNames: [],
-                radioInput: "one",
-                selectedInput: "",
-                multiSelects: []
-            }
-        }
-    }
+<script setup>
+    import { ref } from 'vue';
+    const textInput = ref('Edit me')
+    const checkboxInput = ref(true)
+    const checkboxNames = ref(['Jack'])
+    const radioInput = ref('One')
+    const selectInput = ref('A')
+    const multipleSelects = ref(null)
 </script>
+
 <template>
-    <div class="space-y-4">
-        <div class="flex flex-col w-sm items-start mx-auto">
-            <h2 class="font-bold text-xl">Text Input</h2>
-            <input v-model="newInput" type="text" class="border"/>
-            <p>{{ newInput }}</p>
+    <div class="space-y-4 w-[300px] mx-auto">
+        <div>
+            <h1 class="font-bold text-lg">Text Input</h1>
+            <input type="text" v-model="textInput" class="border border-gray-300 rounded" />
+            <p>{{ textInput }}</p>
+        </div>
+    
+        <div>
+            <h1 class="font-bold text-lg">Checkbox</h1>
+            <input type="checkbox" v-model="checkboxInput" />
+            <label>Checked: {{ checkboxInput }}</label>
         </div>
 
-        <div class="flex flex-col w-sm items-start mx-auto">
-            <h2 class="font-bold text-xl">Checkbox</h2>
-            <div class="flex flex-row gap-2">
-                <input type="checkbox" id="checkbox1" v-model="newCheckbox">
-                <label for="checkbox1">Checked: {{ newCheckbox }}</label>
-            </div>
-        </div>
-
-        <div class="flex flex-col w-sm items-start mx-auto">
-            <h2 class="font-bold text-xl">Multi Checkbox</h2>
-            <div class="flex flex-row gap-2">
-                <input type="checkbox" id="jack" v-model="checkboxNames" value="Jack" />
-                <label for="jack">Jack</label>
-            </div>
-            <div class="flex flex-row gap-2">
-                <input type="checkbox" id="john" v-model="checkboxNames" value="John" />
-                <label for="john">John</label>
-            </div>
-            <div>
-                <input type="checkbox" id="mike" v-model="checkboxNames" value="Mike" />
-                <label for="mike">Mike</label>
+        <div>
+            <h1 class="font-bold text-lg">Multi Checkbox</h1>
+            <div class="space-x-2">
+                <label><input type="checkbox" value="Jack" v-model="checkboxNames"/>Jack</label>
+                <label><input type="checkbox" value="John" v-model="checkboxNames"/>John</label>
+                <label><input type="checkbox" value="Mike" v-model="checkboxNames"/>Mike</label>
             </div>
             <p>Checked names: {{ checkboxNames }}</p>
         </div>
-        <div class="flex flex-col w-sm items-start mx-auto">
-            <h2 class="font-bold text-xl">Radio</h2>
-            <div>
-                <input type="radio" id="one" v-model="radioInput" value="one" />
-                <label for="one">One</label>
-            </div>
-            <div>
-                <input type="radio" id="two" v-model="radioInput" value="two" />
-                <label for="two">Two</label>
+
+        <div>
+            <h1 class="font-bold text-lg">Radio</h1>
+            <div class="space-x-2">
+                <label><input type="radio" value="One" v-model="radioInput">One</label>
+                <label><input type="radio" value="Two" v-model="radioInput">Two</label>
             </div>
             <p>Picked: {{ radioInput }}</p>
         </div>
 
-        <div class="flex flex-col w-sm items-start mx-auto">
-            <h2 class="font-bold text-xl">Select</h2>
-            <select v-model="selectedInput" class="border border-gray-300 p-1">
-                <option disabled value="">Please select one</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
+        <div>
+            <h1 class="font-bold text-lg">Select</h1>
+            <select class="border border-gray-300" v-model="selectInput">
+                <option disabled>Please select:</option>
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
             </select>
-            <p>Selected: {{selectedInput }}</p>
+            <p>Selected: {{ selectInput }}</p>
         </div>
 
-        <div class="flex flex-col w-sm items-start mx-auto">
-            <h2 class="font-bold text-xl">Multi Select</h2>
-            <div>
-                <select multiple v-model="multiSelects" class="w-[100px]">
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                </select>
-                <p>Selected: {{ multiSelects }}</p>
-            </div>
+        <div>
+            <h1 class="font-bold text-lg">Multi Select</h1>
+             <select multiple v-model="multipleSelects" class="border border-gray-300  rounded w-[100px]">
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+             </select>
+             <p>Selected: {{ multipleSelects }}</p>
         </div>
     </div>
+
 </template>

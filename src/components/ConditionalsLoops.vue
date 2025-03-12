@@ -1,12 +1,8 @@
-<script>
-    export default {
-        data() {
-            return {
-                list: [1,2,3],
-                isShow: true
-            }
-        }
-    }
+<script setup>
+    import { ref } from 'vue';
+    const list = ref([1,2,3])
+    const isShow = ref(true)
+
 </script>
 
 <template>
