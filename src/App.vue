@@ -13,6 +13,7 @@ import { RouterLink, RouterView } from 'vue-router';
     <RouterLink to="/simplecomponent">Simple Component</RouterLink>
     <RouterLink to="/markdowneditor">Markdown Editor</RouterLink>
     <RouterLink to="/fetchdata">Fetch Data</RouterLink>
+    <RouterLink to="/gridsortfilter">Grid with Sort and Filter</RouterLink>
   </div>
   <div>
     <RouterView />

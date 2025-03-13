@@ -8,6 +8,7 @@ import FormBinding from "./components/FormBinding.vue";
 import SimpleComponent from "./components/SimpleComponent.vue";
 import MarkdownEditor from "./components/MarkdownEditor.vue";
 import FetchData from "./components/FetchData.vue";
+import GridSortFilter from "./components/GridSortFilter.vue";
 
 const routes = [
     {path: "/", component: HomeView},
@@ -17,7 +18,8 @@ const routes = [
     {path: "/formbinding", component: FormBinding},
     {path: "/simplecomponent", component: SimpleComponent},
     {path: "/markdowneditor", component: MarkdownEditor},
-    {path: "/fetchdata", component: FetchData}
+    {path: "/fetchdata", component: FetchData},
+    {path: "/gridsortfilter", component: GridSortFilter}
 ]
 
 const router = createRouter({
