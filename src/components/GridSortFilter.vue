@@ -12,7 +12,7 @@
 </script>
 
 <template>
-    <div class="w-[350px] outline space-y-4">
+    <div class="w-[350px] mx-auto space-y-4">
         <form>
             <span>Search</span>
             <input v-model="searchQuery" class="border border-gray-300 rounded">
